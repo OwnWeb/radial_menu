@@ -1,18 +1,34 @@
-# radial_menu
+# Flutter Radial Menu
 
-A new flutter plugin project.
+[![pub package](https://img.shields.io/pub/v/radial_menu.svg)](https://pub.dartlang.org/packages/radial_menu)
 
-## Getting Started
+A simple radial menu
+[![Demo screenshot](https://github.com/OwnWeb/radial_menu/blob/master/statics/screenshot.png?raw=true)](https://github.com/OwnWeb/radial_menu/blob/master/statics/screenshot.png?raw=true)
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Usage
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Add `radial_menu` to your pubspec:
 
-The plugin project was generated without specifying the `--platforms` flag, no platforms are currently supported.
-To add platforms, run `flutter create -t plugin --platforms <platforms> .` under the same
-directory. You can also find a detailed instruction on how to add platforms in the `pubspec.yaml` at https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms.
+```yaml
+dependencies:
+  radial_menu: any # or the latest version on Pub
+```
+
+Define your list of `RadialMenuEntry`: 
+
+```dart 
+List<RadialMenuEntry> radialMenuEntries = [
+    RadialMenuEntry(icon: Icons.restaurant, text: 'Restaurant'),
+    RadialMenuEntry(icon: Icons.hotel,text: 'Hotel'),
+    RadialMenuEntry(icon: Icons.pool, text: 'Pool'),
+    RadialMenuEntry(icon: Icons.shopping_cart, text: 'Shop'),
+  ];
+```
+
+Then add it to your `RadialMenu`:
+
+```dart
+  Widget build(BuildContext context) {
+    return RadialMenu(entries: radialMenuEntries,);
+  }
+```

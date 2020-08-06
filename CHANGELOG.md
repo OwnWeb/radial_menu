@@ -1,3 +1,3 @@
-## 0.0.1
+## [0.0.1] 2020/08/06
 
-* TODO: Describe initial release.
+* Initial release with basic RadialMenu widget.

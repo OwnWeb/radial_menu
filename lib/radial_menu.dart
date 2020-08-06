@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+/// The [RadialMenu] widget you can import and use
 class RadialMenu extends StatefulWidget {
   final List<RadialMenuEntry> entries;
   final Color color;
@@ -21,6 +22,7 @@ class RadialMenu extends StatefulWidget {
   State<StatefulWidget> createState() => _RadialMenuState();
 }
 
+/// The [RadialMenuEntry] with icons, callbacks, text and colors
 class RadialMenuEntry {
   /// The callback to trigger on an [RadialMenuEntry] tap
   final Function onTap;
